@@ -24,10 +24,37 @@
             <button id="login" class="btn btn-success">Enter</button>
         </div>
     </div>
+    <div id = "transaction-area">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="deposit status">
+                    <h5>Deposit</h5>
+                    <h2>$00</h2>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="withdraw status">
+                    <h5>Withdraw</h5>
+                    <h2>$00</h2>
+                </div>
+            </div>
+            <div class="col-md-4">
+               <div class="balance status">
+                    <h5>Balance</h5>
+                    <h2>$1240</h2>
+               </div>
+            </div>
+        </div>
+
+    </div>
     <script>
         const loginBtn = document.getElementById("login");
         loginBtn.addEventListener("click", function () {
-            console.log("amake jine naraise.");
+            const loginArea = document.getElementById("login-area");
+            //hide an HTML element by using JavaScript
+            loginArea.style.display = "none";
+            const transactionArea = document.getElementById("transaction-area");
+            transactionArea.style.display = "block";
         })
     </script>
 </body>
